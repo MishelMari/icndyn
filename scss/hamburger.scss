@@ -1,0 +1,134 @@
+@import "hamburger_mixin.css";
+@media only screen and (max-width: 991px) {
+    nav {
+        width: 760px;
+        background: #f84545e8;
+        padding: 5px;
+        margin: 0;
+        height: 60px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+
+/*.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+*/
+
+
+/*.menu li {
+    display: none;
+}*/
+
+@media only screen and (max-width: 991px) {
+    .menu li a {
+        width: 760px;
+        padding: 10px 15px;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .hum {
+        width: 760px;
+        display: block;
+        /* padding: 20px;
+        margin: 0px auto;*/
+    }
+}
+
+.menuToggle {
+    /* padding: 10px;
+    margin: 0px auto;*/
+    color: #fff;
+    /*padding: 7px 0px 0px 25px;*/
+    cursor: pointer;
+    display: none;
+    width: 50px;
+    height: 50px;
+}
+
+@media only screen and (max-width: 991px) {
+    .menuToggle {
+        /*width: 760px;*/
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .menu {
+        width: 1000px;
+        display: none;
+        position: absolute;
+        background: #00b1b1;
+        margin-left: -20px;
+        padding-left: -10px;
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .menu li {
+        width: 760px;
+        display: block;
+    }
+    .menu li a {
+        padding: 10px 5px;
+    }
+}
+
+
+/*.icon {
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+  }
+  */
+
+.hamburger {
+    width: 40px;
+    height: 4px;
+    transform: translate(-0%, 550%);
+    background: #fff;
+    transition: 0.5s;
+    margin-left: 5px;
+}
+
+.hamburger:before,
+.hamburger:after {
+    content: "";
+    width: 40px;
+    height: 4px;
+    position: absolute;
+    background: #fff;
+    transition: 0.5s;
+}
+
+.hamburger:before {
+    top: -16px;
+}
+
+.hamburger:after {
+    top: 16px;
+}
+
+.icon.active .hamburger {
+    background: rgba(0, 0, 0, 0);
+}
+
+.icon.active .hamburger:before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.icon.active .hamburger:after {
+    top: 0;
+    transform: rotate(135deg);
+}
